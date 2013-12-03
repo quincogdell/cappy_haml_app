@@ -5,20 +5,25 @@
   %li{id: 'javascript'} javascript
   %li.backbone backbone
   %li{class: 'jquery'} jquery
-  %li haml
+  %li
+    %a{href: "/haml"} haml practice
 
-- @love_of_grapes = true
-- if @love_of_grapes
-  .grapes.really.love.them#trueluv I love grapes
-- else
-  .no_grapes I hate grates
 
-  .newline i'm always here
 
-:javascript
-  $(document).ready(function(){
-    alert('hi');
-  });
 
-%script
-  %p {{hi}}
+/ in class examples
+/ - @love_of_grapes = true
+/ - if @love_of_grapes
+/   .grapes.really.love.them#trueluv I love grapes
+/ - else
+/   .no_grapes I hate grates
+
+/   .newline i'm always here
+
+/ :javascript
+/   $(document).ready(function(){
+/     alert('hi');
+/   });
+
+/ %script
+/   %p {{hi}}

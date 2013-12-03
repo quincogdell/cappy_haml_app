@@ -39,7 +39,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem "rspec-rails"
-  gem "guard-rspec"
+  gem 'guard-rspec', require: false
   gem "capybara"
   gem "database_cleaner"
   gem "selenium-webdriver"
