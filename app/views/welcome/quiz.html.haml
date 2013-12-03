@@ -1,0 +1,41 @@
+%h1 Sorting Quiz
+
+#quiz
+  %input{name: 'numbers'}
+  %button sort
+
+%section#content
+
+
+
+:javascript
+  var input;
+
+  $(document).ready(function() {
+    $inputSort = $("input");
+    $btnSort = $("button");
+    $btnSort.on("click", sortInput);
+
+  });
+
+  var removeInput = function() {
+    input = $inputSort.val();
+    $("#quiz").remove();
+    return input
+  };
+
+  var sortInput = function(e) {
+    e.preventDefault();
+    input = removeInput().split(",");
+    for(var i = 0; i < input.length; i++){
+      input[i] = parseInt(input[i]);
+    };
+    input.sort(function(a,b) {return a>b});
+    input = input.join(", ");
+    $("#content").append(input);
+  };
+
+
+
+
+
