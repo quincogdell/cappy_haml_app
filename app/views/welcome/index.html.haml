@@ -1,2 +1,24 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.haml
+%ul
+  %li
+    %a{href: "/home"} html
+  %li#css css
+  %li{id: 'javascript'} javascript
+  %li.backbone backbone
+  %li{class: 'jquery'} jquery
+  %li haml
+
+- @love_of_grapes = true
+- if @love_of_grapes
+  .grapes.really.love.them#trueluv I love grapes
+- else
+  .no_grapes I hate grates
+
+  .newline i'm always here
+
+:javascript
+  $(document).ready(function(){
+    alert('hi');
+  });
+
+%script
+  %p {{hi}}
