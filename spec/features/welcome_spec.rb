@@ -65,6 +65,21 @@ describe "The Quiz" do
 
   end
 
+  describe "when i click the 'Random Ajax Numbers' button", js: true do
+    before("each") do
+      visit '/quiz'
+    end
+
+    it "has a button called Random Ajax Numbers" do
+      expect(page.has_button? "Random Ajax Numbers").to be_true
+    end
+
+
+
+
+
+  end
+
 end
 
 # More!
